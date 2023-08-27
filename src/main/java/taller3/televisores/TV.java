@@ -51,7 +51,10 @@ public class TV {
 	
 	//metodo set
 	public void setVolumen(int volumen) {
-		this.volumen = volumen;
+		if (this.estado == true && this.volumen >= 0 && this.volumen <= 7) {
+			this.volumen = volumen;
+		}
+		
 	}
 	//metodo get
 	public int getVolumen(){
@@ -98,18 +101,10 @@ public class TV {
 		}
 	
 	public void volumenUp() {
-		if (this.estado == true) {
-			if (this.volumen >= 0 && this.volumen <=6) {
-				this.volumen++;
-			}
-		}
+		this.setVolumen(this.volumen + 1);
 	}
 	public void volumenDown() {
-		if (this.estado == true) {
-			if (this.volumen <=7 && this.volumen >=1) {
-				this.volumen--;
-			}
-		}
+		this.setVolumen(this.volumen - 1);
 	}
 	
 }
