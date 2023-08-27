@@ -51,7 +51,7 @@ public class TV {
 	
 	//metodo set
 	public void setVolumen(int volumen) {
-		if (this.estado == true && this.volumen >= 0 && this.volumen <= 7) {
+		if (this.getEstado() == true && volumen >= 0 && volumen <= 7) {
 			this.volumen = volumen;
 		}
 		
