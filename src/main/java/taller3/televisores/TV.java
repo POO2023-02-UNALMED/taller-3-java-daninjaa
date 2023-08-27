@@ -14,6 +14,7 @@ public class TV {
 	public TV(Marca marca, boolean estado) {
 		this.marca = marca;
 		this.estado = estado;
+		numTV++;
 	}
 	
 	//metodo set
@@ -67,7 +68,7 @@ public class TV {
 	
 	//metodo set
 	public static void setNumTV(int numTV) {
-		numTV = numTV;
+		TV.numTV = numTV;
 	}
 	//metodo get
 	public static int getNumTV(){
@@ -88,7 +89,7 @@ public class TV {
 	
 	public void canalUp() {
 		if (this.estado == true){
-			if (this.canal >=1 && this.canal < 120){
+			if (this.canal < 120){
 				this.canal++;
 			}
 
@@ -97,7 +98,7 @@ public class TV {
 	}
 	public void canalDown(){
 		if (this.estado == true) {
-			if (this.canal >=2 && this.canal <= 120) {
+			if (this.canal >1) {
 				this.canal--;
 			}
 
