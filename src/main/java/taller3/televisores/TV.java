@@ -90,17 +90,19 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		if (this.estado == true && this.canal >= 1 && this.canal < 120){
+		if (this.estado == true && this.getCanal() >= 1 && this.getCanal() < 120){
 			
-			this.canal++;
+			int nombre = this.getCanal();
+			this.setCanal(nombre++);
 
 		}
 
 	}
 	public void canalDown(){
-		if (this.estado == true && this.canal > 1 && this.canal <= 120) {
+		if (this.estado == true && this.getCanal() > 1 && this.getCanal() <= 120) {
 			
-			this.canal--;
+			int nombre = this.getCanal();
+			this.setCanal(nombre--);
 			
 
 		}
