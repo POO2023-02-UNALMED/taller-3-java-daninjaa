@@ -29,7 +29,9 @@ public class TV {
 	
 	//metodo set
 	public void setCanal(int canal) {
-		this.canal = canal;
+		if (canal >=1 && canal <= 120) {
+			this.canal = canal;
+		}
 	}
 	//metodo get
 	public int getCanal(){
