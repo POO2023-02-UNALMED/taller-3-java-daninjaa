@@ -66,11 +66,11 @@ public class TV {
 	}
 	
 	//metodo set
-	public void setNumTV(int numTV) {
-		this.numTV = numTV;
+	public static void setNumTV(int numTV) {
+		numTV = numTV;
 	}
 	//metodo get
-	public int getNumTV(){
+	public static int getNumTV(){
 		
 		return numTV;
 	}
